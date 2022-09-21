@@ -5,10 +5,28 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
 /**
  *
  * @author Anthony Bravo
  */
+
+public class RoomEntry 
+{
+    private int seats;
+    private String name;
+    
+    public RoomEntry(int seats, String name)
+    {
+        this.seats = seats;
+        this.name = name;      
+    }
+    
+    // Getters
+    public String getName(){return name;}
+    public int getSeats(){return seats;}
+}
+
 public class RoomQueries {
     private static Connection connection;
     private static ArrayList<RoomEntry> rooms = new ArrayList<RoomEntry>();
